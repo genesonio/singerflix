@@ -13,11 +13,6 @@ module.exports = {
         allowNull: false,
         type: Sequelize.DataTypes.STRING
       },
-      position: {
-        allowNull: false,
-        unique: true,
-        type: Sequelize.DataTypes.INTEGER
-      },
       created_at: {
         allowNull: false,
         type: Sequelize.DataTypes.DATE
