@@ -13,7 +13,7 @@ export interface ExerciseCreationAttributes extends Optional<Exercise, "id" | "t
 
 export interface ExerciseInstance extends Model<Exercise, ExerciseCreationAttributes>, Exercise { }
 
-export const Exercise = sequelize.define<ExerciseInstance, ExerciseCreationAttributes>('exercises', {
+export const Exercise = sequelize.define<ExerciseInstance, ExerciseCreationAttributes>('Exercise', {
   id: {
     allowNull: false,
     autoIncrement: true,

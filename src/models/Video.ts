@@ -15,7 +15,7 @@ export interface VideoCreationAttributes extends Optional<Video, 'id' | 'videoUr
 
 export interface VideoInstance extends Model<Video, VideoCreationAttributes>, Video { }
 
-export const Video = sequelize.define<VideoInstance, Video>('videos', {
+export const Video = sequelize.define<VideoInstance, Video>('Video', {
   id: {
     allowNull: false,
     autoIncrement: true,
