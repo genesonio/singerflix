@@ -3,7 +3,7 @@ import AdminJSExpress from "@adminjs/express"
 import AdminJSSequelize from "@adminjs/sequelize"
 import { sequelize } from "../database";
 import { adminJsResources } from "./resources";
-import { User } from "../models";
+import { Category, Exercise, User, Video } from "../models";
 import bcrypt from "bcrypt"
 import { locale } from "./locale";
 
@@ -16,7 +16,23 @@ export const adminJs = new AdminJS({
   branding: {
     companyName: 'SingerFlix'
   },
-  locale: locale
+  locale: locale,
+  dashboard: {
+    component: AdminJS.bundle("./components/Dashboard"),
+    handler: async (req, res, ctx) => {
+      const exercises = await Exercise.count()
+      const videos = await Video.count()
+      const category = await Category.count()
+      const studentUser = await User.count({ where: { role: 'user' } })
+
+      res.json({
+        'Exercícios': exercises,
+        'Videos': videos,
+        'Categorias': category,
+        'Alunos': studentUser
+      })
+    }
+  }
 })
 
 export const adminJsRouter = AdminJSExpress.buildAuthenticatedRouter(adminJs, {
