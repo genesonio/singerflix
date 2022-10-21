@@ -33,7 +33,7 @@ export const locale: Locale = {
       appVersion: 'App: {{version}}',
       loginWelcome: 'Bem vindo',
       exercises: 'Exercícios',
-      categories: 'Categorias',
+      vocalRange: 'Classificação Vocal',
       users: 'Usuários'
     },
     properties: {
@@ -53,7 +53,7 @@ export const locale: Locale = {
       uploadVideo: 'Enviar vídeo',
       thumbnailUrl: 'URL da capa',
       uploadThumbnail: 'Enviar capa',
-      categoryId: 'Categoria',
+      vocalRangeId: 'Classificação Vocal',
       position: 'Posição',
       createdAt: 'Criado em',
       updatedAt: 'Atualizado em',

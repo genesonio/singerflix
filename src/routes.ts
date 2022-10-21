@@ -1,8 +1,8 @@
 import express from "express"
-import { categoriesController } from "./controllers/categoriesController"
+import { vocalRangeController } from "./controllers/vocalRangeController"
 
 const router = express.Router()
 
-router.get('/categories', categoriesController.index)
+router.get('/vocalRange', vocalRangeController.index)
 
 export { router }

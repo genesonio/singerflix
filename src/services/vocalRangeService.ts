@@ -1,17 +1,17 @@
-import { Category } from "../models"
+import { VocalRange } from "../models"
 
-export const categoryService = {
+export const vocalRangeService = {
   findAllPaginated: async (page: number, perPage: number) => {
     const offset = (page - 1) * perPage
 
-    const { count, rows } = await Category.findAndCountAll({
+    const { count, rows } = await VocalRange.findAndCountAll({
       attributes: ['id', 'name'],
       limit: perPage,
       offset,
     })
 
     return {
-      categories: rows,
+      vocalRange: rows,
       page,
       perPage,
       total: count

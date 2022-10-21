@@ -20,13 +20,6 @@ module.exports = {
       thumbnail_url: {
         type: Sequelize.DataTypes.STRING
       },
-      category_id: {
-        allowNull: false,
-        type: Sequelize.DataTypes.INTEGER,
-        references: { model: 'categories', key: 'id' },
-        onUpdate: 'CASCADE',
-        onDelete: 'RESTRICT'
-      },
       created_at: {
         allowNull: false,
         type: Sequelize.DataTypes.DATE

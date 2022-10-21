@@ -1,6 +1,6 @@
 import { ResourceWithOptions } from "adminjs";
-import { Category, Exercise, User, Video } from "../../models";
-import { categoryResourceOptions } from "./category";
+import { VocalRange, Exercise, User, Video } from "../../models";
+import { vocalRangeResourceOptions } from "./vocalRange";
 import { exerciseResourceFeatures, exerciseResourceOptions } from "./exercise";
 import { userResourceOptions } from "./user";
 import { videoResourceFeatures, videoResourceOptions } from "./video";
@@ -8,8 +8,8 @@ import { videoResourceFeatures, videoResourceOptions } from "./video";
 
 export const adminJsResources: ResourceWithOptions[] = [
   {
-    resource: Category,
-    options: categoryResourceOptions
+    resource: VocalRange,
+    options: vocalRangeResourceOptions
   },
   {
     resource: Exercise,

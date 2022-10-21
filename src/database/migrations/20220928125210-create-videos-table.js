@@ -27,6 +27,13 @@ module.exports = {
       seconds_long: {
         type: Sequelize.DataTypes.INTEGER
       },
+      vocal_range_id: {
+        allowNull: false,
+        type: Sequelize.DataTypes.INTEGER,
+        references: { model: 'vocal_ranges', key: 'id' },
+        onUpdate: 'CASCADE',
+        onDelete: 'RESTRICT'
+      },
       exercise_id: {
         allowNull: false,
         type: Sequelize.DataTypes.INTEGER,

@@ -1,15 +1,15 @@
 import { Request, Response } from "express";
 import { getPaginationParams } from "../helpers/getPaginationParams";
-import { categoryService } from "../services/categoryService";
+import { vocalRangeService } from "../services/vocalRangeService";
 
-export const categoriesController = {
+export const vocalRangeController = {
   index: async (req: Request, res: Response) => {
     const [page, perPage] = getPaginationParams(req.query)
 
     try {
-      const paginatedCategories = await categoryService.findAllPaginated(page, perPage)
+      const paginatedVocalRange = await vocalRangeService.findAllPaginated(page, perPage)
 
-      return res.json(paginatedCategories)
+      return res.json(paginatedVocalRange)
     } catch (err) {
 
       if (err instanceof Error) {

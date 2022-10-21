@@ -6,7 +6,6 @@ export interface Exercise {
   name: string
   description: string
   thumbnailUrl: string
-  categoryId: number
 }
 
 export interface ExerciseCreationAttributes extends Optional<Exercise, "id" | "thumbnailUrl"> { }
@@ -30,12 +29,5 @@ export const Exercise = sequelize.define<ExerciseInstance, ExerciseCreationAttri
   },
   thumbnailUrl: {
     type: DataTypes.STRING
-  },
-  categoryId: {
-    allowNull: false,
-    type: DataTypes.INTEGER,
-    references: { model: 'categories', key: 'id' },
-    onUpdate: 'CASCADE',
-    onDelete: 'RESTRICT'
   }
 })

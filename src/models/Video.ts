@@ -8,6 +8,7 @@ export interface Video {
   order: number
   videoUrl: string
   secondsLong: number
+  vocalRangeId: number
   exerciseId: number
 }
 
@@ -38,6 +39,13 @@ export const Video = sequelize.define<VideoInstance, Video>('Video', {
   },
   secondsLong: {
     type: DataTypes.INTEGER
+  },
+  vocalRangeId: {
+    allowNull: false,
+    type: DataTypes.INTEGER,
+    references: { model: 'vocal_ranges', key: 'id' },
+    onUpdate: 'CASCADE',
+    onDelete: 'RESTRICT'
   },
   exerciseId: {
     allowNull: false,

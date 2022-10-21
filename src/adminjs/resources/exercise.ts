@@ -4,9 +4,9 @@ import path from "path";
 
 export const exerciseResourceOptions: ResourceOptions = {
   navigation: 'Catálogo',
-  editProperties: ['name', 'description', 'uploadThumbnail', 'categoryId'],
-  filterProperties: ['name', 'description', 'categoryId', 'createdAt', 'updatedAt'],
-  listProperties: ['id', 'name', 'categoryId']
+  editProperties: ['name', 'description', 'uploadThumbnail'],
+  filterProperties: ['name', 'description', 'createdAt', 'updatedAt'],
+  listProperties: ['id', 'name']
 }
 
 export const exerciseResourceFeatures: FeatureType[] = [

@@ -1,6 +1,6 @@
 import { ResourceOptions } from "adminjs";
 
-export const categoryResourceOptions: ResourceOptions = {
+export const vocalRangeResourceOptions: ResourceOptions = {
   navigation: 'Catálogo',
   editProperties: ['name'],
   filterProperties: ['name', 'createdAt', 'updatedAt'],

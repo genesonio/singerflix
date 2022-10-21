@@ -4,9 +4,9 @@ import path from "path";
 
 export const videoResourceOptions: ResourceOptions = {
   navigation: 'Catálogo',
-  editProperties: ['name', 'description', 'exerciseId', 'order', 'uploadVideo', 'secondsLong'],
-  filterProperties: ['name', 'description', 'exerciseId', 'secondsLong', 'createdAt', 'updatedAt'],
-  listProperties: ['id', 'name', 'exerciseId', 'order', 'secondsLong']
+  editProperties: ['name', 'description', 'vocalRangeId', 'exerciseId', 'order', 'uploadVideo', 'secondsLong'],
+  filterProperties: ['name', 'description', 'vocalRangeId', 'exerciseId', 'secondsLong', 'createdAt', 'updatedAt'],
+  listProperties: ['id', 'name', 'vocalRangeId', 'exerciseId', 'order', 'secondsLong']
 }
 
 export const videoResourceFeatures: FeatureType[] = [
