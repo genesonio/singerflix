@@ -33,7 +33,7 @@ export const locale: Locale = {
       appVersion: 'App: {{version}}',
       loginWelcome: 'Bem vindo',
       exercises: 'Exercícios',
-      vocalRange: 'Classificação Vocal',
+      vocalRanges: 'Classificação Vocal',
       users: 'Usuários'
     },
     properties: {
