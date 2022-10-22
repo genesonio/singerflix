@@ -9,6 +9,7 @@ module.exports = {
       {
         first_name: 'Admin',
         last_name: 'User',
+        gender: 'male',
         phone: '99999-9999',
         birth: '1998-05-28',
         email: 'admin@email.com',
@@ -21,6 +22,6 @@ module.exports = {
   },
 
   async down (queryInterface, Sequelize) {
-    await queryInterface.BulkDelete('users', { where: {email: 'admin@email.com'}}, )
+    await queryInterface.bulkDelete('users', { where: { email: 'admin@email.com' }}, )
   }
 };

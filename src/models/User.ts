@@ -6,6 +6,7 @@ export interface User {
   id: number
   firstName: string
   lastName: string
+  gender: 'male' | 'female'
   phone: string
   birth: Date
   email: string
@@ -31,6 +32,13 @@ export const User = sequelize.define<UserInstance, User>('User', {
   lastName: {
     allowNull: false,
     type: DataTypes.STRING
+  },
+  gender: {
+    allowNull: false,
+    type: DataTypes.STRING,
+    validate: {
+      isIn: [['male', 'female']]
+    }
   },
   phone: {
     allowNull: false,

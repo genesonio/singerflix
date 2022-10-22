@@ -2,7 +2,7 @@
 
 module.exports = {
   async up(queryInterface, Sequelize) {
-    const vocal_range = ['Soprano', 'Mezzo-Soprano', 'Alto', 'Tenor', 'Baritone', 'Bass']
+    const vocal_range = ['Soprano', 'Mezzo-Soprano', 'Contralto', 'Tenor', 'Barítono', 'Baixo']
 
     for (let i = 0; i < vocal_range.length; i++) {
       await queryInterface.bulkInsert('vocal_ranges', [

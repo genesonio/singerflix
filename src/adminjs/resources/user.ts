@@ -3,6 +3,12 @@ import { ResourceOptions } from "adminjs";
 const userResourceOptions: ResourceOptions = {
   navigation: 'Administração',
   properties: {
+    gender: {
+      availableValues: [
+        { value: 'male', label: 'Masculino' },
+        { value: 'female', label: 'Feminino' }
+      ]
+    },
     birth: {
       type: 'date'
     },
@@ -19,6 +25,7 @@ const userResourceOptions: ResourceOptions = {
   editProperties: [
     'firstName',
     'lastName',
+    'gender',
     'phone',
     'birth',
     'email',
@@ -28,6 +35,7 @@ const userResourceOptions: ResourceOptions = {
   filterProperties: [
     'firstName',
     'lastName',
+    'gender',
     'phone',
     'birth',
     'email',
@@ -39,6 +47,7 @@ const userResourceOptions: ResourceOptions = {
   listProperties: [
     'id',
     'firstName',
+    'gender',
     'email',
     'role'
   ],
@@ -46,6 +55,7 @@ const userResourceOptions: ResourceOptions = {
     'id',
     'firstName',
     'lastName',
+    'gender',
     'phone',
     'birth',
     'email',
